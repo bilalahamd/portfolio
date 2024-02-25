@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+
 import Hero from "../Hero";
 import About from "../About";
 import ResumeParts from "../Resumeparts";

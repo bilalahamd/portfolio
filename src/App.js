@@ -1,9 +1,7 @@
 import "./App.css";
 import About from "./components/About";
 import AllCertificate from "./components/AllCertificate";
-import Button from "./components/Button";
-import Certificates from "./components/Cerficates";
-import Cerficate from "./components/Certificate";
+
 import Contact from "./components/Contact";
 import GlobalStyle from "./components/GlobalStyle";
 

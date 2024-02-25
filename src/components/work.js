@@ -32,19 +32,19 @@ const Work = () => {
             <FirstRow>
               <SingleColumn>
                 <Link to={shopAppUrl} target="_blank">
-                  <img src={Shop} alt="First Row Image" />
+                  <img src={Shop} alt="First Row " />
                 </Link>
               </SingleColumn>
             </FirstRow>
             <SecondRow>
               <Column>
                 <Link to={musiceAppUrl} target="_blank">
-                  <img src={Music} alt="Second Row First Column Image" />
+                  <img src={Music} alt="Second Row First Column " />
                 </Link>
               </Column>
               <Column>
                 <Link to={ecomerceAppUrl} target="_blank">
-                  <img src={Ecomerece} alt="Second Row Second Column Image" />
+                  <img src={Ecomerece} alt="Second Row Second Column " />
                 </Link>
               </Column>
             </SecondRow>
@@ -72,7 +72,6 @@ const FirstRow = styled.div`
 
   position: relative;
 `;
-const Container = styled.div``;
 
 const SecondRow = styled.div`
   display: flex;

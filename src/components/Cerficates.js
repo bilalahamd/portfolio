@@ -60,22 +60,7 @@ const Container = styled.div`
     }
   }
 `;
-const StyledButton = styled.button`
-  padding: 0.5rem 1rem;
-  border: none;
-  background: #191919;
-  color: white;
-  font-size: 3rem;
-  box-shadow: 0px 0px 16px #7786a3;
-  transition: all ease-in-out 1s;
-  margin-top: 2rem;
 
-  &:hover {
-    box-shadow: 0px 0px 16px #191919;
-    background: #7786a3;
-    color: white;
-  }
-`;
 const CertificateLink = styled(Link)`
   display: grid;
   text-decoration: none;

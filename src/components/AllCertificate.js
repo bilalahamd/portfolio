@@ -8,7 +8,7 @@ import Image3 from "./images/certificate3.jpg";
 import Image4 from "./images/certificate4.jpg";
 import Image5 from "./images/certificate5.jpg";
 import { motion } from "framer-motion";
-import { PageAnimation, LineAnimation } from "./Animation/Animation";
+import { PageAnimation } from "./Animation/Animation";
 import Footer from "./Footer";
 import ScrollTop from "./ScrollTop";
 const AllImages = [
