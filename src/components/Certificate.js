@@ -37,8 +37,13 @@ const StyledCertificate = styled.div`
 
   img {
     width: 100%;
-    height: 80vh;
+
     margin-bottom: 3rem;
+  }
+  @media screen and (min-width: 768px) {
+    img {
+      height: 80vh;
+    }
   }
 `;
 const Line = styled(motion.div)`

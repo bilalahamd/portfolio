@@ -21,38 +21,21 @@ const Certificates = () => {
 };
 
 export default Certificates;
-// const Container = styled.div`
-//   gap: 2rem;
-//   display: grid;
-//   grid-template-columns: 70% 30%;
-
-//   img {
-//     width: 100%;
-//   }
-
-//   @media screen and (min-width: 768px) {
-//     /* &.grid {
-//       grid-template-columns: 70% 30%;
-//     } */
-//     img {
-//       width: auto;
-//       max-width: 800px;
-//       justify-self: end;
-//     }
-//   }
-// `;
 const Container = styled.div`
   gap: 2rem;
   display: grid;
-  grid-template-columns: 100%; /* Change to single column layout by default */
-
   img {
     width: 100%;
   }
 
-  @media screen and (min-width: 768px) {
-    grid-template-columns: 70% 30%; /* Switch to two-column layout for larger screens */
+  @media screen and (min-width: 820px) {
+    &.grid {
+      grid-template-columns: 70% 30%;
+    }
 
+    /* &.grid {
+      grid-template-columns: 70% 30%;
+    } */
     img {
       width: auto;
       max-width: 800px;
@@ -60,6 +43,28 @@ const Container = styled.div`
     }
   }
 `;
+// const Container = styled.div`
+//   gap: 2rem;
+//   display: grid;
+
+//   justify-items: center;
+//   grid-template-rows: auto; /* Ensure dynamic row height based on content */
+
+//   img {
+//     width: 100%;
+//     max-width: 100%;
+//   }
+
+//   @media screen and (min-width: 768px) {
+//     grid-template-columns: 70% 30%; /* Switch to two-column layout for larger screens */
+
+//     img {
+//       width: auto;
+//       max-width: 800px;
+//       justify-self: end;
+//     }
+//   }
+// `;
 
 const CertificateLink = styled(Link)`
   display: grid;

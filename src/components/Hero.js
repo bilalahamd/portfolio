@@ -8,12 +8,17 @@ import { Link } from "react-router-dom";
 
 const coder = {
   name: "Bilal Ahmad",
-  skills: ["React JS", "Node JS", "Git", "BootStrap"],
+  skills: ["React", "Node JS"],
   hardworker: true,
   problemsolver: true,
-  hireable: function () {
-    return this.harderworker && this.problemsolver && this.skills.length >= 5;
-  },
+  hireable: `function() {
+      return (
+        this.hardworker &&
+        this.problemsolver &&
+        this.skills.length >= 5
+      );
+    }
+  `,
 };
 
 const Hero = () => {
@@ -23,7 +28,12 @@ const Hero = () => {
 
   useEffect(() => {
     setShowLayer(true);
-    setIsAdding(true);
+    const timer = setTimeout(() => {
+      setIsAdding(true);
+    }, 10);
+
+    // Clean up timer
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -142,6 +152,8 @@ const Overlay = styled(motion.div)`
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  white-space: pre-wrap;
   background-color: black;
   z-index: 10; /* Ensure it's above the image */
 
@@ -157,20 +169,25 @@ const CoderInfo = styled(motion.div)`
   z-index: 20;
   color: white;
   text-align: center;
-  padding: 20px;
-  max-width: 80%;
-  overflow: auto;
-  font-size: 10px;
+  padding: 20px; /* Slightly increased for better text wrapping */
+  max-width: 80%; /* Adjusted for smaller screens */
+  line-height: 1.5;
+  font-size: 1rem;
+
+  @media screen and (min-width: 1050px) {
+    line-height: 5rem;
+  }
 
   @media screen and (min-width: 768px) {
-    font-size: 16px;
+    font-size: 1.2rem;
     top: 35%;
     left: 70%;
+    line-height: 2rem;
+    max-width: 90%; /* Further adjusted for smaller screens */
   }
 `;
 
 const CoderCode = styled.pre`
   white-space: pre-wrap;
-  line-height: 1.5;
   text-align: left;
 `;

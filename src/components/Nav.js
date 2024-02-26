@@ -11,7 +11,6 @@ const Nav = () => {
   return (
     <ScrollProvider>
       <Navbar>
-        {/* <img src={Logo} alt="logo" /> */}
         <ClickableLogo to="/">
           <BrandLogo>
             <Logo />
@@ -87,6 +86,22 @@ const Navbar = styled.nav`
   top: 0;
   left: 0;
   z-index: 10;
+  @media screen and (min-width: 820px) {
+    .nav--toggler {
+      display: none;
+    }
+    .nav--list {
+      width: auto;
+      display: flex;
+      max-height: 100%;
+      opacity: 1;
+      font-size: 1.6rem;
+      color: white;
+    }
+    .nav__list-item {
+      border: 0;
+    }
+  }
 `;
 const BrandLogo = styled.div`
   display: flex;
@@ -117,7 +132,7 @@ const List = styled.ul`
     max-height: 100vh;
     opacity: 1;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 820px) {
     &.collapsible--content {
       max-height: 100vh;
       opacity: 1;
@@ -128,7 +143,7 @@ const ListItem = styled.li`
   padding: 1rem 2rem;
 
   border-bottom: 1px solid #222;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 820px) {
     border: 0;
   }
 `;

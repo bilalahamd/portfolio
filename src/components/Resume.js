@@ -27,13 +27,14 @@ const Resume = ({ title, description }) => {
 
 export default Resume;
 const Education = styled.div`
-  margin-bottom: 10rem;
+  margin-bottom: 4rem;
 `;
 const StyledResume = styled.div`
   display: grid;
   gap: 2rem;
 
-  @media screen and (min-width: 758px) {
+  @media screen and (min-width: 768px) {
+    gap: 6rem;
     grid-template-columns: 30% 70%;
   }
 `;

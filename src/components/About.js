@@ -59,6 +59,7 @@ const StyledAbout = styled(motion.div)`
     text-indent: 19rem;
     text-align: justify;
     margin-top: 0;
+    font-size: 1.8rem;
   }
   span {
     color: #7786a3;

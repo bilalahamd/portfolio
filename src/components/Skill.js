@@ -82,7 +82,8 @@ const StyledResume = styled.div`
   display: grid;
   gap: 2rem;
 
-  @media screen and (min-width: 758px) {
+  @media screen and (min-width: 768px) {
+    gap: 6rem;
     grid-template-columns: 30% 70%;
   }
 `;
@@ -94,7 +95,7 @@ const Question = styled.div`
   }
 `;
 const Answer = styled.div`
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
   h1 {
     margin-bottom: 0;
     font-size: 3rem;

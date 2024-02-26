@@ -132,7 +132,10 @@ const Header = styled.header`
   }
   p {
     letter-spacing: 1px;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 1.8rem;
   }
 `;
 const ContactContent = styled.div`
@@ -154,11 +157,12 @@ const FormGroup = styled.div`
     transition: all 1s;
   }
   input::placeholder {
-    color: #7786a3;;
+    color: #7786a3;
   }
   input:focus {
     border-color: #191919;
-    box-shadow: 0px 1px 1px #7786a3; inset, 0px 0px 8px #7786a3;;
+    box-shadow: 0px 1px 1px #7786a3, 0px 0px 8px #7786a3;
+
     background-color: black;
   }
   textarea {
@@ -167,11 +171,12 @@ const FormGroup = styled.div`
   }
   textarea:focus {
     border-color: #191919;
-    box-shadow: 0px 1px 1px #7786a3; inset, 0px 0px 8px #7786a3;;
+    box-shadow: 0px 1px 1px #7786a3, 0px 0px 8px #7786a3;
+
     background-color: black;
   }
   label {
-    text-shadow: 2px 2px #7786a3;;
+    text-shadow: 2px 2px #7786a3;
     margin-bottom: 1rem;
   }
 `;
@@ -189,8 +194,10 @@ const Adress = styled.div`
   }
 `;
 const AdressDetail = styled.div`
+  font-size: 1.6rem;
   @media screen and (min-width: 768px) {
     padding: 0 5rem 0 0;
+    font-size: 1.8rem;
   }
   @media screen and (min-width: 1024px) {
     padding: 0 16rem 0 0;

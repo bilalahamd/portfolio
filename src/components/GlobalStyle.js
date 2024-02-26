@@ -103,22 +103,7 @@ p{
        grid-template-columns:repeat(3,1fr);
    }
 }
-@media screen and (min-width:768px){
-    .nav--toggler{
-        display: none;
-    }
-.nav--list{
-    width: auto;
-    display: flex;
-    max-height: 100%;
-    opacity: 1;
-    font-size: 1.6rem;
-    color: white;
-}
-.nav__list-item{
-    border: 0;
-}
-}
+
 
    
 
