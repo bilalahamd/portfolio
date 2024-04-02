@@ -14,7 +14,7 @@ const Experience = ({ title, description }) => {
         <ExperienceAnswer>
           <Answer>
             <h1>Bright Vision Soft</h1>
-            <p>Full-Stack JavaScript Developer• 2022-2023•</p>
+            <p>Full-Stack JavaScript Developer• 2022-2023</p>
           </Answer>
           <Answer>
             <h1>Data Entry Spacilist</h1>
