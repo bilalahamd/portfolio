@@ -5,45 +5,50 @@ import { motion } from "framer-motion";
 import useScroll from "./useScroll";
 import ScrollTop from "./ScrollTop";
 import { Fade, PageAnimation } from "./Animation/Animation";
+import Footer from "./Footer";
 
 const About = () => {
   const [element, controls] = useScroll(Fade, 0.1);
 
   return (
-    <motion.section
-      className="block "
-      variants={PageAnimation}
-      exit="exit"
-      initial="hidden"
-      animate="show"
-    >
-      <StyledAbout
-        variants={Fade}
-        ref={element}
+    <>
+      <motion.section
+        className="block "
+        variants={PageAnimation}
+        exit="exit"
         initial="hidden"
-        animate={controls}
-        className="container grid grid--1x2"
+        animate="show"
       >
-        <Image src={Personal} alt="decoration" />
-        <article>
-          <h1>About Me</h1>
-          <p>
-            Hello! My name is <span>"Bilal Ahmad"</span> and I'm a full-stack
-            javascript as well as Php developer I have Excellent knowledge of
-            pure javascript(including es5 , es6 and es7 standards) HTML5 , CSS3
-            and various libraries and tools:Node.js , React.js , Redux ,
-            Express.js , Webpack , twitter Bootstrap , SAAS/SCSS , Styled
-            Components and many more. And also Experience in development on
-            Node.js and php backend. I also have a good understanding about
-            MongoDb and mySql. So <span>"Hire me!"</span> I would like to work
-            in your company.....
-            <br />
-            thank you!
-          </p>
-        </article>
-      </StyledAbout>
-      <ScrollTop />
-    </motion.section>
+        <StyledAbout
+          variants={Fade}
+          ref={element}
+          initial="hidden"
+          animate={controls}
+          className="container grid grid--1x2"
+        >
+          <Image src={Personal} alt="decoration" />
+          <article>
+            <h1>About Me</h1>
+            <p>
+              Hello! My name is <span>"Bilal Ahmad"</span> and I'm a full-stack
+              javascript as well as Php developer I have Excellent knowledge of
+              pure javascript(including es5 , es6 and es7 standards) HTML5 ,
+              CSS3 and various libraries and tools:Node.js , React.js , Redux ,
+              Express.js , Webpack , twitter Bootstrap , SAAS/SCSS , Styled
+              Components and many more. And also Experience in development on
+              Node.js and php backend. I also have a good understanding about
+              MongoDb and mySql. So <span>"Hire me!"</span> I would like to work
+              in your company.....
+              <br />
+              thank you!
+            </p>
+          </article>
+        </StyledAbout>
+
+        <ScrollTop />
+      </motion.section>
+      <Footer />
+    </>
   );
 };
 

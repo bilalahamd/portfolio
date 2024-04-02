@@ -44,6 +44,14 @@ const Skills = ({ title, description }) => {
             </LevelWrapper>
           </Answer>
           <Answer>
+            <h1>TypeScript</h1>
+            <LevelWrapper>
+              <Level variants={skillAnimation("75%", "#2D79C7")}>
+                <p>50%</p>
+              </Level>
+            </LevelWrapper>
+          </Answer>
+          <Answer>
             <h1>Node Js</h1>
             <LevelWrapper>
               <Level variants={skillAnimation("70%", "#152F10")}>

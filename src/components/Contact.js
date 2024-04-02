@@ -14,6 +14,7 @@ import {
 import Button from "./Button";
 import useScroll from "./useScroll";
 import { Fade } from "./Animation/Animation";
+import Footer from "./Footer";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -118,6 +119,7 @@ const Contact = () => {
           </Adress>
         </ContactContent>
       </motion.section>
+      <Footer />
       <ScrollTop />
     </motion.div>
   );

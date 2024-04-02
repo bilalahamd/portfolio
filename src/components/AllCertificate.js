@@ -2,22 +2,27 @@ import React from "react";
 import Cerficate from "./Certificate";
 import { styled } from "styled-components";
 import Image from "./images/ed.jpg";
+
 import Image1 from "./images/certificate1.jpg";
 import Image2 from "./images/certificate2.jpg";
 import Image3 from "./images/certificate3.jpg";
 import Image4 from "./images/certificate4.jpg";
 import Image5 from "./images/certificate5.jpg";
+import Image6 from "./images/Nebosh verification_page-0001.jpg";
+import Image7 from "./images/react-18_page-0001.jpg";
 import { motion } from "framer-motion";
 import { PageAnimation } from "./Animation/Animation";
 import Footer from "./Footer";
 import ScrollTop from "./ScrollTop";
 const AllImages = [
   { id: 1, src: Image, alt: "image" },
-  { id: 2, src: Image1, alt: "image1" },
-  { id: 3, src: Image2, alt: "image2" },
-  { id: 3, src: Image3, alt: "image3" },
-  { id: 4, src: Image4, alt: "image4" },
-  { id: 5, src: Image5, alt: "image5" },
+  { id: 2, src: Image7, alt: "react18" },
+  { id: 3, src: Image1, alt: "image1" },
+  { id: 4, src: Image2, alt: "image2" },
+  { id: 5, src: Image3, alt: "image3" },
+  { id: 6, src: Image4, alt: "image4" },
+  { id: 7, src: Image5, alt: "image5" },
+  { id: 8, src: Image6, alt: "nebosh" },
 ];
 const AllCertificate = () => {
   return (

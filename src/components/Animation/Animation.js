@@ -39,21 +39,20 @@ export const PageAnimation = {
   },
 };
 export const LayerAnimation = {
-  // hidden: { y: "100%", opacity: 0 },
+  hidden: { height: "0%", opacity: 0 },
   show: {
-    y: 0,
+    height: "100%",
     opacity: 1,
-    transition: { duration: 1, ease: "easeOut", delay: 1 },
+    transition: { duration: 1, ease: "easeOut" },
   },
   exit: {
-    y: "-100%", // Move the layer upwards
+    height: "0%", // Move the layer upwards
 
     transition: {
       duration: 1,
-      ease: "easeIn",
-      delay: 2,
-      when: "afterChildren",
-      staggerChildren: 0.5,
+
+      // when: "afterChildren",
+      // staggerChildren: 0.5,
     }, // Start after a delay of 1 second
   },
 };

@@ -8,6 +8,7 @@ import useScroll from "./useScroll";
 import { motion } from "framer-motion";
 import ScrollTop from "./ScrollTop";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 const Work = () => {
   const musiceAppUrl = "https://nostalgic-heyrovsky-1a06cc.netlify.app/";
@@ -51,6 +52,7 @@ const Work = () => {
           </div>
         </StyledGrid>
       </motion.div>
+      <Footer />
       <ScrollTop />
     </motion.div>
   );

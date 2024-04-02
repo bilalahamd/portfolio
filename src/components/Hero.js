@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Button from "./Button";
 import styled from "styled-components";
 import HeroImage from "./images/hero.png";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { TitleAnimation, Fade } from "./Animation/Animation";
 import { Link } from "react-router-dom";
 
@@ -91,7 +91,7 @@ const Hero = () => {
           </motion.div>
           <motion.div variants={Fade}>
             <p className="hero__tagline">
-              I am a full-stack JavaScript Developer
+              I am a Full-stack JavaScript Developer
             </p>
             <Link to="/contact">
               <Button title="contact me" />
@@ -100,7 +100,11 @@ const Hero = () => {
         </Intro>
         <ImageContainer variants={Fade}>
           <Image src={HeroImage} alt="just for decoration" />
-          {showLayer && <Overlay />}
+          {showLayer && (
+            <AnimatePresence>
+              <Overlay layout transition={{ duration: 0.3 }} />
+            </AnimatePresence>
+          )}
         </ImageContainer>
         <CoderInfo variants={Fade}>
           <CoderCode>{displayedText}</CoderCode>

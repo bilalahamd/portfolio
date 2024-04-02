@@ -9,6 +9,7 @@ import useScroll from "./useScroll";
 import { Fade, PageAnimation } from "./Animation/Animation";
 
 import styled from "styled-components";
+import Footer from "./Footer";
 const FileUrl = "http://localhost:3000/BilalAhmadcv.pdf";
 const ResumeParts = () => {
   const [element, controls] = useScroll(Fade, 0.2);
@@ -46,6 +47,7 @@ const ResumeParts = () => {
           Resume <FontAwesomeIcon icon={faCloudArrowDown} />
         </StyledButton>
       </SecondRow>
+      <Footer />
     </motion.section>
   );
 };
