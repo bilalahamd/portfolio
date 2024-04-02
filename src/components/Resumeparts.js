@@ -47,7 +47,6 @@ const ResumeParts = () => {
           Resume <FontAwesomeIcon icon={faCloudArrowDown} />
         </StyledButton>
       </SecondRow>
-      <Footer />
     </motion.section>
   );
 };

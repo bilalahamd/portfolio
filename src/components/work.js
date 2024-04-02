@@ -52,7 +52,6 @@ const Work = () => {
           </div>
         </StyledGrid>
       </motion.div>
-      <Footer />
       <ScrollTop />
     </motion.div>
   );

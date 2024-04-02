@@ -119,7 +119,7 @@ const Contact = () => {
           </Adress>
         </ContactContent>
       </motion.section>
-      <Footer />
+
       <ScrollTop />
     </motion.div>
   );
