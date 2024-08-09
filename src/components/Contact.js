@@ -14,13 +14,14 @@ import {
 import Button from "./Button";
 import useScroll from "./useScroll";
 import { Fade } from "./Animation/Animation";
-import Footer from "./Footer";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [element, controls] = useScroll(Fade, 0.1);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("submitted");
@@ -35,16 +36,20 @@ const Contact = () => {
       to_name: "Bilal Ahmad",
       message: message,
     };
+
     emailjs
       .send(serviceId, templateId, templateParams, publicKey)
       .then((response) => {
-        console.log("Email sent successfully", response);
         setName("");
         setEmail("");
         setMessage("");
+        setIsSubmitted(true);
+        setTimeout(() => {
+          setIsSubmitted(false);
+        }, 3000);
       })
       .catch((error) => {
-        console.error("sending faild", error);
+        console.error("Sending failed", error);
       });
   };
   return (
@@ -60,38 +65,46 @@ const Contact = () => {
           <p>Feel Free To Drop a Line To Contact ME</p>
         </Header>
         <ContactContent className="container grid grid--1x2">
-          <form onSubmit={handleSubmit}>
-            <FormGroup className="form-group">
-              <label htmlFor="">Name</label>
-              <input
-                type="text"
-                placeholder="Enter Your Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-            </FormGroup>
-            <FormGroup className="form-group">
-              <label htmlFor="">Email</label>
-              <input
-                type="Email"
-                placeholder="Enter Your Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </FormGroup>
-            <FormGroup className="form-group">
-              <label htmlFor="">Message</label>
-              <textarea
-                name=""
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                id=""
-                cols="30"
-                rows="10"
-              ></textarea>
-            </FormGroup>
-            <Button title="Submit" />
-          </form>
+          <div>
+            <form onSubmit={handleSubmit}>
+              <FormGroup className="form-group">
+                <label htmlFor="">Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter Your Name"
+                  value={name}
+                  required
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </FormGroup>
+              <FormGroup className="form-group">
+                <label htmlFor="">Email</label>
+                <input
+                  type="Email"
+                  placeholder="Enter Your Email"
+                  value={email}
+                  required
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </FormGroup>
+              <FormGroup className="form-group">
+                <label htmlFor="">Message</label>
+                <textarea
+                  name=""
+                  value={message}
+                  required
+                  onChange={(e) => setMessage(e.target.value)}
+                  id=""
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </FormGroup>
+              <Button title="Submit" />
+            </form>
+            <SuccessMessage>
+              {isSubmitted && <p>Email sent successfully!</p>}
+            </SuccessMessage>
+          </div>
           <Adress>
             <h1>Adress And Phone</h1>
             <AdressDetail>
@@ -112,7 +125,7 @@ const Contact = () => {
                 <FontAwesomeIcon icon={faEnvelope} />
               </AdressGroup>
               <AdressGroup className="adress-group">
-                <p>0334-0565314</p>
+                <p>(+966) 536640375</p>
                 <FontAwesomeIcon icon={faPhone} />
               </AdressGroup>
             </AdressDetail>
@@ -181,6 +194,9 @@ const FormGroup = styled.div`
     text-shadow: 2px 2px #7786a3;
     margin-bottom: 1rem;
   }
+`;
+const SuccessMessage = styled.p`
+  color: green;
 `;
 const Adress = styled.div`
   h1 {

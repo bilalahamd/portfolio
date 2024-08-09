@@ -42,7 +42,7 @@ const Footer = () => {
             >
               <StyledFontAwesomeIcon icon={faInstagram} size="2x" />
             </Anchor>
-            <Anchor href="https://wa.me/923340565314" target="_blank">
+            <Anchor href="https://wa.me/+966536640375" target="_blank">
               <StyledFontAwesomeIcon icon={faWhatsapp} size="2x" />
             </Anchor>
             <Anchor

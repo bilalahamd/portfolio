@@ -8,7 +8,7 @@ import Image2 from "./images/certificate2.jpg";
 import Image3 from "./images/certificate3.jpg";
 import Image4 from "./images/certificate4.jpg";
 import Image5 from "./images/certificate5.jpg";
-import Image6 from "./images/Nebosh verification_page-0001.jpg";
+import Image6 from "./images/NEBOSH.jpg";
 import Image7 from "./images/react-18_page-0001.jpg";
 import { motion } from "framer-motion";
 import { PageAnimation } from "./Animation/Animation";
