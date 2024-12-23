@@ -60,6 +60,14 @@ const Skills = ({ title, description }) => {
             </LevelWrapper>
           </Answer>
           <Answer>
+            <h1>Next Js</h1>
+            <LevelWrapper>
+              <Level variants={skillAnimation("70%", "#666666")}>
+                <p>80%</p>
+              </Level>
+            </LevelWrapper>
+          </Answer>
+          <Answer>
             <h1>Mongo DB</h1>
             <LevelWrapper>
               <Level variants={skillAnimation("50%", "#118D4D")}>
