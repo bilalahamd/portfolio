@@ -17,8 +17,8 @@ const Experience = ({ title, description }) => {
             <p>Full-Stack JavaScript Developer• 2022-2023</p>
           </Answer>
           <Answer>
-            <h1>Data Entry Spacilist</h1>
-            <p>Inayat health Center Battagram• 2021 2022</p>
+            <h1>Mexil Software Solutions</h1>
+            <p>Front-End Web Developer• 2021 2022</p>
           </Answer>
         </ExperienceAnswer>
       </StyledResume>

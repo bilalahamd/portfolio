@@ -12,7 +12,7 @@ const Resume = ({ title, description }) => {
         </Question>
         <EducationAnswer>
           <Answer>
-            <h1>AGRICULTURE UNIVERSITY PESHAWAR</h1>
+            <h1>The University Of Agriculture Peshawar,Pakistan</h1>
             <p>BS Computer Science</p>
           </Answer>
           <Answer>

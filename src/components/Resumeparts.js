@@ -11,7 +11,7 @@ import { Fade, PageAnimation } from "./Animation/Animation";
 import styled from "styled-components";
 
 // const FileUrl = "http://localhost:3000/BilalAhmadcv.pdf";
-const FileUrl = "/BilalAhweb.pdf";
+const FileUrl = "/BilalAhmad.pdf";
 const ResumeParts = () => {
   const [element, controls] = useScroll(Fade, 0.2);
   const downloadCv = (url) => {
