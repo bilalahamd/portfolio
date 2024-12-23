@@ -5,9 +5,9 @@ import { styled } from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
-  faInstagram,
   faWhatsapp,
   faLinkedin,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 const Footer = () => {
@@ -36,11 +36,11 @@ const Footer = () => {
               <StyledFontAwesomeIcon icon={faFacebook} size="2x" />
             </Anchor>
             <Anchor
-              href="https://www.instagram.com/bilal14396/"
+              href="https://github.com/bilalahamd"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <StyledFontAwesomeIcon icon={faInstagram} size="2x" />
+              <StyledFontAwesomeIcon icon={faGithub} size="2x" />
             </Anchor>
             <Anchor href="https://wa.me/+966536640375" target="_blank">
               <StyledFontAwesomeIcon icon={faWhatsapp} size="2x" />
